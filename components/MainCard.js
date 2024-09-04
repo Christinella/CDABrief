@@ -17,24 +17,24 @@ export const MainCard = ({
       </h1>
       <p className={styles.description}>{description}</p>
       <Image
-        width="300px"
-        height="300px"
+        width="300"
+        height="300"
         src={`/icons/${iconName}.svg`}
         alt="weatherIcon"
       />
-      <h1 className={styles.temperature}>
+      {/* <h1 className={styles.temperature}>
         {unitSystem == "metric"
-          ? Math.round(weatherData.main.temp)
-          : Math.round(ctoF(weatherData.main.temp))}
-        °{unitSystem == "metric" ? "C" : "F"}
-      </h1>
-      <p>
+          // ? Math.round(weatherData.main.temp)
+          // : Math.round(ctoF(weatherData.main.temp))}
+        // °{unitSystem == "metric" ? "C" : "F"}
+      </h1> */}
+      {/* <p>
         Feels like{" "}
         {unitSystem == "metric"
           ? Math.round(weatherData.main.feels_like)
           : Math.round(ctoF(weatherData.main.feels_like))}
         °{unitSystem == "metric" ? "C" : "F"}
-      </p>
+      </p> */}
     </div>
   );
 };
