@@ -1,7 +1,7 @@
 // Convertir un temps ISO 8601 en heure locale
 export const isoToLocalTime = (isoTime, timezone) => {
   const date = new Date(isoTime);
-  return date.toLocaleTimeString('en-GB', { timeZone: timezone, hour12: false }); // Retourne l'heure en format 24 heures
+  return date.toLocaleTimeString('en-GB', { timeZone: timezone, hour24: false }); // Retourne l'heure en format 24 heures
 };
 
 // Convertir l'heure en format 12 heures

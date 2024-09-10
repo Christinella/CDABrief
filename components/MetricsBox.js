@@ -35,7 +35,7 @@ export const MetricsBox = ({ weatherData, unitSystem }) => {
         metric={weatherData.current.precipitation}
         unit={"°"}
       />
-        {/* // unit={getAMPM(unitSystem,  weatherData.timezone)} */}
+  {getAMPM(unitSystem,  weatherData.timezone)}
    
     </div>
   );

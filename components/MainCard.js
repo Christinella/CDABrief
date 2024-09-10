@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ctoF } from "../services/converters";
 import styles from "./MainCard.module.css";
+import config from "../config";
 
 // Associer des descriptions et des noms d'icônes aux codes météo
 const weatherDescriptions = {
@@ -30,7 +31,7 @@ export const MainCard = ({
     : Math.round(ctoF(weatherData.current.temperature_2m));
 
   // Utiliser les codes météo pour obtenir la description et l'icône
-  const weather_code = weatherData.weather_code;
+  const weather_code = weatherData.current.weather_code;
   const weatherInfo = weatherDescriptions[weather_code] || {
     description: "Unknown",
     
@@ -39,7 +40,7 @@ export const MainCard = ({
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.location}>
-        {weatherData.latitude}, {weatherData.longitude}
+        {config.city},{config.country}
       </h1>
       <p className={styles.description}>{city}</p>
       {/* Afficher l'icône météo */}
