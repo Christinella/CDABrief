@@ -33,7 +33,7 @@ export const MainCard = ({
   const weather_code = weatherData.weather_code;
   const weatherInfo = weatherDescriptions[weather_code] || {
     description: "Unknown",
-    icon: "default_icon",  // Icône par défaut si le code est inconnu
+    
   };
 
   return (
