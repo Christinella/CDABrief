@@ -1,5 +1,5 @@
 # Weather App
-![Image text](/path/to/the/weatherApp.png)
+![](/weatherApp.png)
 
 ## Contexte 
 Vous êtes développeur web pour le compte d’une agence web. Votre agence a signé un
