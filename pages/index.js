@@ -41,8 +41,7 @@ export const App = () => {
     <div className={styles.wrapper}>
       <MainCard
         city={weatherData.name}
-        // country={weatherData.sys.country}
-        // description={weatherData.weather[0].description}
+        country={weatherData.current.temperature_2m}
         // iconName={weatherData.weather[0].icon}
         unitSystem={unitSystem}
         weatherData={weatherData}

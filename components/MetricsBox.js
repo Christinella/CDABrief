@@ -14,50 +14,29 @@ export const MetricsBox = ({ weatherData, unitSystem }) => {
       <MetricsCard
         title={"Humidity"}
         iconSrc={"/icons/humidity.png"}
-        // metric={weatherData.main.humidity}
+        metric={weatherData.current.relative_humidity_2m}
         unit={"%"}
       />
       <MetricsCard
         title={"Wind speed"}
         iconSrc={"/icons/wind.png"}
-        // metric={getWindSpeed(unitSystem, weatherData.wind.speed)}
-        unit={unitSystem == "metric" ? "m/s" : "m/h"}
+        metric={weatherData.current.wind_speed_10m}
+        unit={unitSystem == "metric" ? "km/h" : ""}
       />
       <MetricsCard
         title={"Wind direction"}
         iconSrc={"/icons/compass.png"}
-        // metric={degToCompass(weatherData.wind.deg)}
+        metric={weatherData.current.wind_direction_10m}
+        unit={"°"}
       />
       <MetricsCard
-        title={"Visibility"}
-        iconSrc={"/icons/binocular.png"}
-        metric={getVisibility(unitSystem, weatherData.visibility)}
-        unit={unitSystem == "metric" ? "km" : "miles"}
+        title={"precipitation"}
+        iconSrc={"/icons/compass.png"}
+        metric={weatherData.current.precipitation}
+        unit={"°"}
       />
-      <MetricsCard
-        title={"Sunrise"}
-        iconSrc={"/icons/sunrise.png"}
-        metric={getTime(
-          unitSystem,
-          // weatherData.sys.sunrise,
-          weatherData.timezone
-        )}
-        unit={getAMPM(
-          unitSystem,
-          // weatherData.sys.sunrise,
-          weatherData.timezone
-        )}
-      />
-      <MetricsCard
-        title={"Sunset"}
-        iconSrc={"/icons/sunset.png"}
-        metric={getTime(
-          unitSystem,
-          // weatherData.sys.sunset,
-          weatherData.timezone
-        )}
-        // unit={getAMPM(unitSystem, weatherData.sys.sunset, weatherData.timezone)}
-      />
+        {/* // unit={getAMPM(unitSystem,  weatherData.timezone)} */}
+   
     </div>
   );
 };
