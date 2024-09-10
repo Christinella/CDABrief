@@ -16,6 +16,7 @@ const weatherDescriptions = {
   8: { description: "Dense drizzle", icon: "brouillard" },
   9: { description: "Slight rain", icon: "neige" },
   10: { description: "Moderate rain", icon: "nuitNuage" },
+  
   // Ajoutez d'autres codes si nécessaire
 };
 
