@@ -41,7 +41,7 @@ export const App = () => {
       <MainCard
         city={weatherData.name}
        temperature={weatherData.current.temperature_2m}
-        // iconSrc={icon[0]}
+       iconName={weatherData.weather_code}
         unitSystem={unitSystem}
         weatherData={weatherData}
       />

@@ -7,7 +7,7 @@ import config from "../config";
 const weatherDescriptions = {
   0: { description: "Clear sky", icon: "soleil" },
   1: { description: "Mainly clear", icon: "soleiNuage" },
-  2: { description: "Partly cloudy", icon: "Nuage" },
+  61: { description: "Partly cloudy", icon: "Nuage" },
   3: { description: "Overcast", icon: "nuageux" },
   4: { description: "Fog", icon: "fog" },
   5: { description: "Depositing rime fog", icon: "pluvieux" },
@@ -26,12 +26,12 @@ export const MainCard = ({
   unitSystem,
   weatherData,
 }) => {
-  // Convertir la température
+
   const temperature = unitSystem === "metric"
     ? Math.round(weatherData.current.temperature_2m)
     : Math.round(ctoF(weatherData.current.temperature_2m));
 
-  // Utiliser les codes météo pour obtenir la description et l'icône
+ 
   const weather_code = weatherData.current.weather_code;
   const weatherInfo = weatherDescriptions[weather_code] || {
     description: "Unknown",

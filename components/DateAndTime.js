@@ -7,19 +7,19 @@ export const DateAndTime = ({ weatherData, unitSystem }) => {
 
   useEffect(() => {
     const updateTime = () => {
-      setCurrentDateTime(new Date()); // Met à jour l'état avec la date actuelle
+      setCurrentDateTime(new Date()); 
     };
 
-    // Met à jour l'heure toutes les secondes
+   
     const intervalId = setInterval(updateTime, 1000);
 
-    // Nettoie l'intervalle lors du démontage du composant
+   
     return () => clearInterval(intervalId);
   }, []);
 
   if (!weatherData || !weatherData.current || !weatherData.timezone) {
     console.error("Données météo manquantes.");
-    return <p>Données indisponibles</p>; // Gérer l'absence de données proprement
+    return <p>Données indisponibles</p>; 
   }
 
   return (
@@ -27,8 +27,8 @@ export const DateAndTime = ({ weatherData, unitSystem }) => {
       <h2>
         {`${getWeekDay(currentDateTime)}, ${getTime(
           unitSystem,
-          currentDateTime.toISOString(), // Temps actuel au format ISO 8601
-          weatherData.timezone // Fuseau horaire
+          currentDateTime.toISOString(), 
+          weatherData.timezone 
         )} ${getAMPM(
           unitSystem,
           currentDateTime.toISOString(),
